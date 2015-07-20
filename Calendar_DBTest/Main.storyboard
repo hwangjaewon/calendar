@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAZ-Js-Lak">
+                                <rect key="frame" x="0.0" y="355" width="108" height="30"/>
+                                <state key="normal" title="Today">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didGoTodayTouch" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VSR-WY-P5H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6a-lR-Xrr">
+                                <rect key="frame" x="204" y="355" width="116" height="30"/>
+                                <state key="normal" title="Change mode">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didChangeModeTouch" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uEc-Nc-0ds"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwJ-Km-Y1C" userLabel="AddView">
+                                <rect key="frame" x="0.0" y="358" width="320" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="일정" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDM-hp-RTO">
+                                        <rect key="frame" x="36" y="13" width="30" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-bj-SwJ">
+                                        <rect key="frame" x="36" y="42" width="249" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="249" id="B0e-pP-XML"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="내용" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DH-as-4ze">
+                                        <rect key="frame" x="38" y="80" width="30" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BX-e1-I8l">
+                                        <rect key="frame" x="38" y="105" width="245" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbY-Qd-gwm">
+                                        <rect key="frame" x="189" y="173" width="30" height="30"/>
+                                        <state key="normal" title="추가">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedAddBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gb9-jU-KcD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTB-gM-nMH">
+                                        <rect key="frame" x="115" y="172" width="30" height="30"/>
+                                        <state key="normal" title="수정">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EditBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VD0-vo-VKN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-nx-MCc" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wRk-E7-7hS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-x3-ghF" customClass="JTCalendarContentView">
+                                <rect key="frame" x="0.0" y="41" width="320" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Kfn-Ge-jpQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R8f-gj-z30" userLabel="DeleteView">
+                                <rect key="frame" x="0.0" y="305" width="320" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="정말 삭제하시겠습니까?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kS8-2l-Rf4">
+                                        <rect key="frame" x="79" y="21" width="162" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMB-p0-QFw">
+                                        <rect key="frame" x="177" y="60" width="30" height="30"/>
+                                        <state key="normal" title="삭제">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedDeleteBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7yW-iA-mcl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNj-Eq-STh">
+                                        <rect key="frame" x="103" y="59" width="30" height="30"/>
+                                        <state key="normal" title="취소">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bLk-nx-MCc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="HVR-vR-z6b"/>
+                            <constraint firstItem="tAZ-Js-Lak" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="Il1-mE-TXp" userLabel="Horizontal Space - (20) - Today - View"/>
+                            <constraint firstItem="m6a-lR-Xrr" firstAttribute="top" secondItem="IaV-x3-ghF" secondAttribute="bottom" constant="30" id="JGt-zH-o6k" userLabel="Vertical Space - (20) - Change mode - Calendar Content View"/>
+                            <constraint firstItem="jwJ-Km-Y1C" firstAttribute="top" secondItem="IaV-x3-ghF" secondAttribute="bottom" constant="65" id="JwM-wg-Squ"/>
+                            <constraint firstItem="bLk-nx-MCc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="YQ1-f6-O16"/>
+                            <constraint firstItem="tAZ-Js-Lak" firstAttribute="top" secondItem="IaV-x3-ghF" secondAttribute="bottom" constant="30" id="ZYm-cc-wFZ" userLabel="Vertical Space - (20) - Today - Calendar Content View"/>
+                            <constraint firstAttribute="trailing" secondItem="IaV-x3-ghF" secondAttribute="trailing" id="ab3-jD-An0"/>
+                            <constraint firstItem="IaV-x3-ghF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cFY-Hs-lva"/>
+                            <constraint firstAttribute="centerX" secondItem="jwJ-Km-Y1C" secondAttribute="centerX" id="cQ3-YG-er6"/>
+                            <constraint firstAttribute="trailing" secondItem="IaV-x3-ghF" secondAttribute="trailing" id="d19-oL-lkX"/>
+                            <constraint firstItem="IaV-x3-ghF" firstAttribute="top" secondItem="bLk-nx-MCc" secondAttribute="bottom" id="rX7-ap-Tfe"/>
+                            <constraint firstAttribute="trailing" secondItem="bLk-nx-MCc" secondAttribute="trailing" id="sT1-xO-UwV"/>
+                            <constraint firstAttribute="centerX" secondItem="R8f-gj-z30" secondAttribute="centerX" id="sk2-aB-nRg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DeleteView" destination="R8f-gj-z30" id="9DN-i8-VQy"/>
+                        <outlet property="EditBtn" destination="eTB-gM-nMH" id="uiT-CL-3KC"/>
+                        <outlet property="addBtn" destination="FbY-Qd-gwm" id="Jne-hY-8yT"/>
+                        <outlet property="addSchedule" destination="BhO-bj-SwJ" id="obb-cr-UUm"/>
+                        <outlet property="addSchedule2" destination="0BX-e1-I8l" id="me8-X1-68j"/>
+                        <outlet property="addScheduleUIView" destination="jwJ-Km-Y1C" id="lgB-6e-iBv"/>
+                        <outlet property="calendarContentView" destination="IaV-x3-ghF" id="VFE-26-7W4"/>
+                        <outlet property="calendarContentViewHeight" destination="Kfn-Ge-jpQ" id="r4i-aV-g9Y"/>
+                        <outlet property="calendarMenuView" destination="bLk-nx-MCc" id="exp-NN-C52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mFI-8q-Obh">
+            <objects>
+                <viewController id="Ei1-lL-QZ9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xFW-J3-dwU"/>
+                        <viewControllerLayoutGuide type="bottom" id="6BG-xe-1mp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Hn-7m-xHu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6k-n2-fsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="327"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
